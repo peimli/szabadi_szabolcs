@@ -1,0 +1,13 @@
+SELECT fovaros FROM `orszagok` WHERE orszag = 'MADAGASZKÁR'; 
+SELECT orszag FROM `orszagok` WHERE fovaros = 'OUAGADOUGOU';
+SELECT orszag FROM `orszagok` WHERE autojel = 'TT';
+SELECT orszag FROM `orszagok` WHERE penzjel = 'SGD';
+SELECT orszag FROM `orszagok` WHERE telefon = '61';
+SELECT terulet FROM orszagok WHERE orszag = 'MONACO';
+SELECT nepesseg FROM orszagok WHERE orszag = 'MÁLTA';
+SELECT nepesseg/terulet*1000 FROM orszagok WHERE orszag = 'JAPÁN';
+SELECT SUM(nepesseg) FROM orszagok;
+SELECT SUM(terulet) FROM orszagok;
+SELECT AVG(terulet) FROM orszagok;
+SELECT AVG(nepesseg)/AVG(terulet) FROM orszagok;
+SELECT COUNT(*) FROM orszagok WHERE terulet > 1000;
